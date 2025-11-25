@@ -1,0 +1,49 @@
+subscription_id,resource_group,vm_name,location,power_state,os_type,version,private_ip,public_ip,vm_size,tags
+aa2fb66e-be7d-4f03-8042-1af6c6884d7a,RG_SEA_001,SEAWINDOWSVM,southeastasia,running,Windows,WindowsServer,172.18.0.4,4.194.150.143,Standard_B1s,"{
+  ""Owner"": ""muhamad.budie"",
+  ""Department"": ""PlatformEngineering"",
+  ""CostCenter"": ""PE-0042"",
+  ""Environment"": ""Production"",
+  ""Role"": ""VDIHost"",
+  ""Tier"": ""Compute"",
+  ""Application"": ""GlobalVDI"",
+  ""Backup"": ""Enabled"",
+  ""Monitoring"": ""Enabled"",
+  ""DataClassification"": ""Confidential"",
+  ""CreatedBy"": ""Terraform"",
+  ""Project"": ""CloudInventoryCollector"",
+  ""ExpiryDate"": ""2026-01-01""
+}
+"
+aa2fb66e-be7d-4f03-8042-1af6c6884d7a,RG_JP_WEST,JPVMTEST001,japanwest,running,Linux,ubuntu-24_04-lts,172.17.0.4,4.190.160.134,Standard_B1s,"{
+  ""Owner"": ""muhamad.budie"",
+  ""Department"": ""PlatformEngineering"",
+  ""CostCenter"": ""PE-0042"",
+  ""Environment"": ""Production"",
+  ""Role"": ""VDIHost"",
+  ""Tier"": ""Compute"",
+  ""Application"": ""GlobalVDI"",
+  ""Backup"": ""Enabled"",
+  ""Monitoring"": ""Enabled"",
+  ""DataClassification"": ""Confidential"",
+  ""CreatedBy"": ""Terraform"",
+  ""Project"": ""CloudInventoryCollector"",
+  ""ExpiryDate"": ""2026-01-01""
+}
+"
+aa2fb66e-be7d-4f03-8042-1af6c6884d7a,RG_EASTUS_001,freetiertestubuntu0001,malaysiawest,running,Linux,ubuntu-24_04-lts,172.16.0.4,85.211.196.84,Standard_B1s,"{
+  ""Owner"": ""muhamad.budie"",
+  ""Department"": ""PlatformEngineering"",
+  ""CostCenter"": ""PE-0042"",
+  ""Environment"": ""Production"",
+  ""Role"": ""VDIHost"",
+  ""Tier"": ""Compute"",
+  ""Application"": ""GlobalVDI"",
+  ""Backup"": ""Enabled"",
+  ""Monitoring"": ""Enabled"",
+  ""DataClassification"": ""Confidential"",
+  ""CreatedBy"": ""Terraform"",
+  ""Project"": ""CloudInventoryCollector"",
+  ""ExpiryDate"": ""2026-01-01""
+}
+"
