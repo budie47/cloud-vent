@@ -8,7 +8,7 @@ if PROJECT_ROOT not in sys.path:
 
 import pandas as pd
 import psycopg2
-from db.db_connection import get_connection  
+from db.db_connection import get_connection, get_vmname  
 
 # File picker
 import tkinter as tk
@@ -39,6 +39,10 @@ def insert_vm_row(cursor, row):
         row.get("tags")  # stored as JSONB
     ))
 
+def check_vm_exists(vm_name):
+    """Check if a VM with the given name exists in the database."""
+    result = get_vmname(vm_name)
+    return result is not None
 
 def pick_csv_file():
     """Open a Windows/macOS/Linux file picker dialog."""
@@ -63,7 +67,11 @@ def convert_csv_to_postgres(csv_file):
     print(f"Inserting {len(df)} rows into PostgreSQL...")
 
     for _, row in df.iterrows():
-        insert_vm_row(cursor, row)
+        if check_vm_exists(row["vm_name"]):
+            print(f"⚠ VM '{row['vm_name']}' already exists. Skipping insertion.")
+            continue
+        else:
+            insert_vm_row(cursor, row)
 
     conn.commit()
     cursor.close()

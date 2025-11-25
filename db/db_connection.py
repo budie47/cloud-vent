@@ -21,4 +21,18 @@ def get_connection():
         print("❌ Error connecting to PostgreSQL:", e)
         raise
 
+def get_vmname(vmname):
+    try:
+        conn = get_connection()
+        cursor = conn.cursor()
+        query = "SELECT vm_name FROM vm_inventory WHERE vm_name = %s"
+        cursor.execute(query, (vmname,))
+        result = cursor.fetchone()
+        cursor.close()
+        conn.close()
+        return result
+    except Exception as e:
+        print("❌ Error fetching VM by name:", e)
+        raise
+
 
